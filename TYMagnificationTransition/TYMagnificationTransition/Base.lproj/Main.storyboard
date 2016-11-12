@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Begin View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BeginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDq-th-9Je">
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q6O-ex-cg2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WDq-th-9Je" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G2o-qz-80K"/>
+                            <constraint firstItem="WDq-th-9Je" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bJh-Zi-jzu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="35"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="X9F-bO-JH8">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="WVx-Ux-Qqg" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ost-R8-j2H"/>
+                        <viewControllerLayoutGuide type="bottom" id="0hk-Tv-h81"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PZz-8l-MY0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="iPhone-6-Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="awJ-ih-kY1"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="awJ-ih-kY1" firstAttribute="top" secondItem="PZz-8l-MY0" secondAttribute="top" id="Aw0-gV-nEd"/>
+                            <constraint firstAttribute="bottom" secondItem="awJ-ih-kY1" secondAttribute="bottom" id="LZK-62-IXf"/>
+                            <constraint firstItem="awJ-ih-kY1" firstAttribute="leading" secondItem="PZz-8l-MY0" secondAttribute="leading" id="cxC-JQ-Wzh"/>
+                            <constraint firstAttribute="trailing" secondItem="awJ-ih-kY1" secondAttribute="trailing" id="u5d-GX-w59"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W4h-eC-4zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="746" y="35"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iPhone-6-Wallpaper" width="750" height="1334"/>
+    </resources>
+</document>
