@@ -32,7 +32,8 @@ present与dismiss的位置，通过margin设置
 	    {
 	        self.modalPresentationStyle = UIModalPresentationCustom;
 	        //配置参数
-	        _magniAnima= [MagnificationAnimator magnificationAnimatorWithShapeType:ShapeTypeOval diameter:50 margin:20 duration:0.25];
+	        _magniAnima= [MagnificationAnimator
+                      magnificationAnimatorWithShapeType:ShapeTypeTriangle diameter:20 topMargin:100 rightMargin:100 duration:0.25];
 	        //强引用
 	        self.transitioningDelegate = _magniAnima;
 	    }

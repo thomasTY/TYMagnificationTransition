@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED64DA0D1DD8A1BF0089E2BE /* MagnificationAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = ED64DA0C1DD8A1BF0089E2BE /* MagnificationAnimator.m */; };
 		EDA1055B1DD6BC9100C26BC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA1055A1DD6BC9100C26BC0 /* main.m */; };
 		EDA1055E1DD6BC9200C26BC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA1055D1DD6BC9100C26BC0 /* AppDelegate.m */; };
 		EDA105611DD6BC9200C26BC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA105601DD6BC9200C26BC0 /* ViewController.m */; };
 		EDA105641DD6BC9200C26BC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA105621DD6BC9200C26BC0 /* Main.storyboard */; };
 		EDA105661DD6BC9200C26BC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA105651DD6BC9200C26BC0 /* Assets.xcassets */; };
 		EDA105691DD6BC9200C26BC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA105671DD6BC9200C26BC0 /* LaunchScreen.storyboard */; };
-		EDA105721DD6C78800C26BC0 /* MagnificationAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA105711DD6C78800C26BC0 /* MagnificationAnimator.m */; };
 		EDA105751DD6CE0E00C26BC0 /* BeginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA105741DD6CE0E00C26BC0 /* BeginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED64DA0B1DD8A1BF0089E2BE /* MagnificationAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagnificationAnimator.h; sourceTree = "<group>"; };
+		ED64DA0C1DD8A1BF0089E2BE /* MagnificationAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagnificationAnimator.m; sourceTree = "<group>"; };
 		EDA105561DD6BC9100C26BC0 /* TYMagnificationTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TYMagnificationTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA1055A1DD6BC9100C26BC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EDA1055C1DD6BC9100C26BC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -28,8 +30,6 @@
 		EDA105651DD6BC9200C26BC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDA105681DD6BC9200C26BC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDA1056A1DD6BC9200C26BC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDA105701DD6C78800C26BC0 /* MagnificationAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagnificationAnimator.h; sourceTree = "<group>"; };
-		EDA105711DD6C78800C26BC0 /* MagnificationAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagnificationAnimator.m; sourceTree = "<group>"; };
 		EDA105731DD6CE0E00C26BC0 /* BeginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeginViewController.h; sourceTree = "<group>"; };
 		EDA105741DD6CE0E00C26BC0 /* BeginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED64DA0A1DD8A1BF0089E2BE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				ED64DA0B1DD8A1BF0089E2BE /* MagnificationAnimator.h */,
+				ED64DA0C1DD8A1BF0089E2BE /* MagnificationAnimator.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		EDA1054D1DD6BC9100C26BC0 = {
 			isa = PBXGroup;
 			children = (
@@ -64,14 +73,13 @@
 		EDA105581DD6BC9100C26BC0 /* TYMagnificationTransition */ = {
 			isa = PBXGroup;
 			children = (
+				ED64DA0A1DD8A1BF0089E2BE /* Tools */,
 				EDA1055C1DD6BC9100C26BC0 /* AppDelegate.h */,
 				EDA1055D1DD6BC9100C26BC0 /* AppDelegate.m */,
 				EDA105731DD6CE0E00C26BC0 /* BeginViewController.h */,
 				EDA105741DD6CE0E00C26BC0 /* BeginViewController.m */,
 				EDA1055F1DD6BC9200C26BC0 /* ViewController.h */,
 				EDA105601DD6BC9200C26BC0 /* ViewController.m */,
-				EDA105701DD6C78800C26BC0 /* MagnificationAnimator.h */,
-				EDA105711DD6C78800C26BC0 /* MagnificationAnimator.m */,
 				EDA105621DD6BC9200C26BC0 /* Main.storyboard */,
 				EDA105651DD6BC9200C26BC0 /* Assets.xcassets */,
 				EDA105671DD6BC9200C26BC0 /* LaunchScreen.storyboard */,
@@ -160,9 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED64DA0D1DD8A1BF0089E2BE /* MagnificationAnimator.m in Sources */,
 				EDA105611DD6BC9200C26BC0 /* ViewController.m in Sources */,
 				EDA1055E1DD6BC9200C26BC0 /* AppDelegate.m in Sources */,
-				EDA105721DD6C78800C26BC0 /* MagnificationAnimator.m in Sources */,
 				EDA1055B1DD6BC9100C26BC0 /* main.m in Sources */,
 				EDA105751DD6CE0E00C26BC0 /* BeginViewController.m in Sources */,
 			);
@@ -319,6 +327,7 @@
 				EDA1056F1DD6BC9200C26BC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

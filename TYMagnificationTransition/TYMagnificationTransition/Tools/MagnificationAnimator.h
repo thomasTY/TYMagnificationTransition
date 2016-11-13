@@ -22,7 +22,8 @@ typedef enum : NSUInteger
 
  @param shapeType 放大图形
  @param diameter  直径
- @param margin    间距
+ @param topMargin 顶部间距
+ @param rightMargin 右侧间距
  @param duration  动画时间
 
  @return 放大动画转场动画器对象实例
@@ -34,7 +35,8 @@ typedef enum : NSUInteger
 
  @param shapeType 放大图形
  @param diameter  直径
- @param margin    间距
+ @param topMargin 顶部间距
+ @param rightMargin 右侧间距
  @param duration  动画时间
  
  @return 放大动画转场动画器对象实例

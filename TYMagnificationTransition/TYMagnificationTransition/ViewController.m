@@ -33,7 +33,7 @@
         self.modalPresentationStyle = UIModalPresentationCustom;
         //配置参数
         _magniAnima= [MagnificationAnimator
-                      magnificationAnimatorWithShapeType:ShapeTypeTriangle diameter:20 topMargin:100 rightMargin:100 duration:3];
+                      magnificationAnimatorWithShapeType:ShapeTypeTriangle diameter:20 topMargin:100 rightMargin:100 duration:0.25];
         //强引用
         self.transitioningDelegate = _magniAnima;
     }
