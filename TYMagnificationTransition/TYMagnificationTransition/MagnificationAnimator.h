@@ -27,8 +27,7 @@ typedef enum : NSUInteger
 
  @return 放大动画转场动画器对象实例
  */
-- (instancetype)initWithShapeType:(ShapeType)shapeType diameter:(CGFloat)diameter margin:(CGFloat) margin duration:(NSTimeInterval)duration;
-
+- (instancetype)initWithShapeType:(ShapeType)shapeType diameter:(CGFloat)diameter topMargin:(CGFloat)topMargin rightMargin:(CGFloat)rightMargin duration:(NSTimeInterval)duration;
 
 /**
  快速创建对象方法
@@ -40,7 +39,7 @@ typedef enum : NSUInteger
  
  @return 放大动画转场动画器对象实例
  */
-+ (instancetype)magnificationAnimatorWithShapeType:(ShapeType)shapeType diameter:(CGFloat)diameter margin:(CGFloat)margin duration:(NSTimeInterval)duration;
++ (instancetype)magnificationAnimatorWithShapeType:(ShapeType)shapeType diameter:(CGFloat)diameter topMargin:(CGFloat)topMargin rightMargin:(CGFloat)rightMargin duration:(NSTimeInterval)duration;
 
 
 @end

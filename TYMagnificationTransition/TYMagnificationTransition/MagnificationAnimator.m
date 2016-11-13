@@ -12,34 +12,38 @@
 
 @end
 
+ShapeType _shapeType = ShapeTypeOval;
+CGFloat _diameter = 0.0;
+CGFloat _topMargin = 0.0;
+CGFloat _rightMargin = 0.0;
+NSTimeInterval _duration = 0.0;
 
 @implementation MagnificationAnimator
 {
     //展示标记
     BOOL _isPresented;
-    
-    ShapeType _shapeType;
+
     UIBezierPath * _beginPath;
     UIBezierPath * _endPath;
-    CGFloat _diameter;
-    CGFloat _margin;
-    NSTimeInterval _duration;
+
     
     id <UIViewControllerContextTransitioning> _transitionContext;
 }
 
-- (instancetype)initWithShapeType:(ShapeType)shapeType diameter:(CGFloat)diameter margin:(CGFloat)margin duration:(NSTimeInterval)duration
+- (instancetype)initWithShapeType:(ShapeType)shapeType diameter:(CGFloat)diameter topMargin:(CGFloat)topMargin rightMargin:(CGFloat)rightMargin duration:(NSTimeInterval)duration
 {
     _shapeType = shapeType;
     _diameter = diameter;
-    _margin = margin;
+    _topMargin = topMargin;
+    _rightMargin = rightMargin;
     _duration = duration;
+
     return [[MagnificationAnimator alloc] init];
 }
 
-+ (instancetype)magnificationAnimatorWithShapeType:(ShapeType)shapeType diameter:(CGFloat)diameter margin:(CGFloat)margin duration:(NSTimeInterval)duration
++ (instancetype)magnificationAnimatorWithShapeType:(ShapeType)shapeType diameter:(CGFloat)diameter topMargin:(CGFloat)topMargin rightMargin:(CGFloat)rightMargin duration:(NSTimeInterval)duration
 {
-    return [[self alloc] initWithShapeType:shapeType diameter:diameter margin:margin duration:duration];
+    return [[self alloc] initWithShapeType:shapeType diameter:diameter topMargin:topMargin rightMargin:rightMargin duration:duration];
 }
 
 #pragma mark - UIViewControllerTransitioningDelegate
@@ -83,13 +87,16 @@
 #pragma mark - 放大动画
 - (void)magnificationAnimationWith:(UIView *)view
 {
+    
+
+    
     CGFloat viewWidth = view.bounds.size.width;
     CGFloat viewHeight = view.bounds.size.height;
     CGFloat maxRadius = sqrt(viewWidth * viewWidth + viewHeight * viewHeight);
     
     CAShapeLayer * shapeLayer = [CAShapeLayer layer];
     
-    CGRect beginRect = CGRectMake(viewWidth - _diameter - _margin, _margin , _diameter, _diameter);
+    CGRect beginRect = CGRectMake(viewWidth - _diameter - _rightMargin, _topMargin , _diameter, _diameter);
     
     switch (_shapeType)
     {
@@ -107,10 +114,10 @@
         case ShapeTypeTriangle:
         {
             _beginPath = [UIBezierPath bezierPath];
-            [_beginPath moveToPoint:CGPointMake(viewWidth - _margin - _diameter, _margin)];
-            [_beginPath addLineToPoint:CGPointMake(viewWidth - _margin, _margin)];
-            [_beginPath addLineToPoint:CGPointMake(viewWidth - _margin, _diameter + _margin)];
-            [_beginPath addLineToPoint:CGPointMake(viewWidth - _margin - _diameter, _margin)];
+            [_beginPath moveToPoint:CGPointMake(viewWidth - _rightMargin - _diameter, _topMargin)];
+            [_beginPath addLineToPoint:CGPointMake(viewWidth - _rightMargin, _topMargin)];
+            [_beginPath addLineToPoint:CGPointMake(viewWidth - _rightMargin, _diameter + _topMargin)];
+            [_beginPath addLineToPoint:CGPointMake(viewWidth - _rightMargin - _diameter, _topMargin)];
 
             break;
         }
@@ -140,6 +147,7 @@
             [_endPath addLineToPoint:CGPointMake(-viewWidth, 0)];
             break;
         }
+
     }
     
     CABasicAnimation * anima = [CABasicAnimation animationWithKeyPath:@"path"];
